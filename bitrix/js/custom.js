@@ -77,6 +77,12 @@ $(document).ready(function () {
         slidesPerView: 4,
         spaceBetween: 20
     });
+	
+	
+	$('.share_wrapp .text.button').on('click', function(){
+		$(this).toggleClass('toggled')
+	});
+	
 		
 		
 	});

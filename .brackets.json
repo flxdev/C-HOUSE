@@ -1,6 +1,8 @@
 {
     "jscodehints.detectedExclusions": [
         "D:/Projects/C-House/alarm.flxmd.by(main)/bitrix/cache/js/s1/aspro_mshop/template_4de0eefffb33cba7b34b13c6b4d415fd/template_4de0eefffb33cba7b34b13c6b4d415fd1098.js",
-        "D:/Projects/C-House/alarm.flxmd.by(main)/bitrix/js/custom.js"
+        "D:/Projects/C-House/alarm.flxmd.by(main)/bitrix/js/custom.js",
+        "D:/Projects/C-House/alarm.flxmd.by(main)-git/bitrix/cache/js/s1/aspro_mshop/template_4de0eefffb33cba7b34b13c6b4d415fd/template_4de0eefffb33cba7b34b13c6b4d415fd1098.js",
+        "D:/Projects/C-House/alarm.flxmd.by(main)-git/bitrix/js/custom.js"
     ]
 }
