@@ -83,6 +83,16 @@ $(document).ready(function () {
 		$(this).toggleClass('toggled')
 	});
 	
+	// counter_block
+	
+	$('.counter_block .minus, .counter_block .plus').hover(function(){
+		$('.counter_block, .counter_block.big_basket input[type="text"]').css({'border-color': '#f1c40f'});
+		},function(){
+		$('.counter_block, .counter_block.big_basket input[type="text"]').css({'border-color': ''});
+	});
+	
+
+	
 		
 		
 	});
