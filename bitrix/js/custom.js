@@ -91,6 +91,14 @@ $(document).ready(function () {
 		$('.counter_block, .counter_block.big_basket input[type="text"]').css({'border-color': ''});
 	});
 	
+	//submenu hover
+	
+	$('.item .child_container .child_wrapp ul > li.menu_item.menu_item-show_all').hover(function(){
+		$('.child.child-submenu', this).css({'display': 'block'});
+		},function(){
+		$('.child.child-submenu', this).css({'display': ''});
+	});
+	
 
 	
 		
