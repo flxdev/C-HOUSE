@@ -99,6 +99,19 @@ $(document).ready(function () {
 		$('.child.child-submenu', this).css({'display': ''});
 	});
 	
+	//info-block hover on order page
+	
+	$('.s_1 i svg').hover(function(){
+		$('.s_1 .info-block').css({'display': 'block'});
+		},function(){
+		$('.s_1 .info-block').css({'display': ''});
+	});
+	
+	$('.s_2 i svg').hover(function(){
+		$('.s_2 .info-block').css({'display': 'block'});
+		},function(){
+		$('.s_2 .info-block').css({'display': ''});
+	});
 
 	
 		
