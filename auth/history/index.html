@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>Регистрация - Сайт по умолчанию</title>
+	<title>История заказов - Сайт по умолчанию</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="HandheldFriendly" content="true" />
 	<meta name="yes" content="yes" />
@@ -714,209 +714,359 @@
 			</header>
 		</div>
 		<div class="content-heading order">
-			<div class="breadcrumbs" id="navigation"><a href="../index.html" id="bx_breadcrumb_0" title="Главная"><span>Главная</span></a><span class="separator">/</span><span>Регистрация</span></div>
-			<h1>Регистрация</h1>
+			<div class="breadcrumbs" id="navigation"><a href="../index.html" id="bx_breadcrumb_0" title="Главная"><span>Главная</span></a><span class="separator">/</span><a href="../index.html" id="bx_breadcrumb_1" title="Главная"><span>Личный кабинет </span></a><span class="separator">/</span><span>История заказов</span></div>
+			<h1>Персональные данные</h1>
 		</div>
 		<div class="wrapper_inner bg-white">
 			<section class="middle">
 				<div class="container">
 					<div id="content">
+						<div class="left_block">
+							<ul class="left_menu">
+								<li class="   item ">
+									<a href="index.html">
+										<span>Персональные данные</span>
+									</a>
+								</li>
+								<li class=" item current">
+									<a href="news/index.html">
+										<span>История заказов</span>
+									</a>
+								</li>
+								<li class=" item ">
+									<a href="staff/index.html">
+										<span>Сменить пароль</span>
+									</a>
+								</li>
+								<li class=" item go-out">
+									<a href="staff/index.html">
+										<span>Выйти</span>
+									</a>
+								</li>
 
-						<div class="module-form-block-wr registraion-page registraion-page-mod">
+							</ul>
+							<script type="text/javascript">
+								$("ul.left_menu li:not(.current)").click(function () {
+									$(this).siblings().removeClass("current");
+									$(this).addClass("current");
+								});
+								if ($('.child_container').length) {
+									$('.child_container .menu_item').each(function () {
+										if ($(this).hasClass('current')) {
+											$(this).closest('.item').addClass('current');
+										}
+									})
+								}
+							</script>
+						</div>
+						<div class="right_block right_block-order-history">
 
-							<div class="form-block">
-								<div class="wrap_md">
-									<div class="main_info iblock">
-<!--delete
-										<div class="top">
-											<p>После регистрации на сайте вам будет доступно отслеживание состояния заказов, личный кабинет и другие новые возможности.</p>
-										</div>
--->
-										<script>
-											$(document).ready(function () {
-												$("form#registraion-page-form").validate({
-													rules: {
-														emails: "email"
-													},
-													messages: {
-														"captcha_word": {
-															remote: 'Неверное значение'
-														},
-													},
-													highlight: function (element) {
-														$(element).parent().addClass('error');
-													},
-													unhighlight: function (element) {
-														$(element).parent().removeClass('error');
-													},
-													submitHandler: function (form) {
-														form.submit();
-														if ($("form#registraion-page-form").valid()) {
-															setTimeout(function () {
-																//$(form).find('button[type="submit"]').attr("disabled", "disabled");
-															}, 300);
-														}
-													},
-													errorPlacement: function (error, element) {
-														error.insertBefore(element);
-													}
-												});
-												$("form[name=bx_auth_servicesform_inline]").validate();
-											})
-										</script>
-
-										<form id="registraion-page-form" method="post" action="/auth/registration/" name="regform" enctype="multipart/form-data" novalidate="novalidate">
-										<div id="order_form_div">
-											<div class="section filter">
-												<h3>Выберете тип покупателя</h3>
-												<div class="right-block">
-													<div class="label left">
-													<input type="radio" id="PERSON_TYPE_1" name="PERSON_TYPE" value="1" checked="checked" onclick="submitForm()">
-													<label for="PERSON_TYPE_1"><span>Физическое лицо</span></label>
-												</div>
-												<div class="label left">
-													<input type="radio" id="PERSON_TYPE_2" name="PERSON_TYPE" value="2" onclick="submitForm()">
-													<label for="PERSON_TYPE_2"><span>Юридическое лицо</span></label>
-												</div>
-												</div>
-<!--
-												<div class="label left">
-													<input type="radio" id="PERSON_TYPE_1" name="PERSON_TYPE" value="1" checked="checked" onclick="submitForm()">
-													<label for="PERSON_TYPE_1"><span>Физическое лицо</span></label>
-												</div>
-												<div class="label left">
-													<input type="radio" id="PERSON_TYPE_2" name="PERSON_TYPE" value="2" onclick="submitForm()">
-													<label for="PERSON_TYPE_2"><span>Юридическое лицо</span></label>
-												</div>
--->
-												<div class="clear"></div>
-												<input type="hidden" name="PERSON_TYPE_OLD" value="1">
-											</div>
-										</div>
-										<div class="group-block">
-											
-										<h3>Заполните контактную информацию</h3>
-											<div class="right-block">
-												<input type="hidden" name="register_submit_button" value="reg">
-												<div class="form-control bg">
-													<div class="wrap_md">
-														<div class="iblock label_block">
-															<label for="input_NAME">Имя<span class="star">*</span></label>
-
-															<input size="30" type="text" id="input_NAME" name="REGISTER[NAME]" required="" value="" aria-required="true">
-														</div>
-	<!--delete
-														<div class="iblock text_block">
-															Ваше имя необходимо для того, чтобы мы знали с кем имеем дело)) </div>
-	-->
-													</div>
-												</div>
-												<div class="form-control bg">
-													<div class="wrap_md">
-														<div class="iblock label_block">
-															<label for="input_NAMEF">Фамилия<span class="star">*</span></label>
-
-															<input size="30" type="text" id="input_NAMEF" name="REGISTER[NAME]" required="" value="" aria-required="true">
-														</div>
-	<!--delete
-														<div class="iblock text_block">
-															Ваше имя необходимо для того, чтобы мы знали с кем имеем дело)) </div>
-	-->
-													</div>
-												</div>
-												<div class="form-control bg">
-													<div class="wrap_md">
-														<div class="iblock label_block">
-															<label for="input_EMAIL">Электронный адрес<span class="star">*</span></label>
-
-															<input size="30" type="email" id="input_EMAIL" name="REGISTER[EMAIL]" required="" value="" aria-required="true">
-														</div>
-	<!--
-														<div class="iblock text_block">
-															Является логином для входа на сайт.
-															<br>Также на него будут приходить уведомления о статусах заказа </div>
-	-->
-													</div>
-												</div>
-												<div class="form-control bg">
-													<div class="wrap_md">
-														<div class="iblock label_block">
-															<label for="input_PERSONAL_PHONE">Телефон <span class="star">*</span></label>
-
-															<input size="30" type="text" id="input_PERSONAL_PHONE" name="REGISTER[PERSONAL_PHONE]" class="phone " required="" value="" aria-required="true">
-														</div>
-	<!--
-														<div class="iblock text_block">
-															Контактный телефон нужен для уточнения деталей заказа </div>
-	-->
-													</div>
-												</div>
-												<div class="form-control bg">
-													<div class="wrap_md">
-														<div class="iblock label_block">
-															<label for="input_PASSWORD">Пароль <span class="star">*</span></label>
-
-															<input size="30" type="password" id="input_PASSWORD" name="REGISTER[PASSWORD]" required="" value="" autocomplete="off" class="password " aria-required="true">
-
-														</div>
-	<!--
-														<div class="iblock text_block">
-															Длина пароля не менее 6 символов </div>
-	-->
-													</div>
-												</div>
-												<div class="form-control bg">
-													<div class="wrap_md">
-														<div class="iblock label_block">
-															<label for="input_CONFIRM_PASSWORD">Повторите пароль<span class="star">*</span></label>
-
-															<input size="30" type="password" id="input_CONFIRM_PASSWORD" name="REGISTER[CONFIRM_PASSWORD]" required="" value="" autocomplete="off" class="confirm_password " aria-required="true">
-
-														</div>
-														<div class="iblock text_block">
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-											<input size="30" id="input_LOGIN" type="hidden" value="1" name="REGISTER[LOGIN]">
-											<div class="group-block">
-											
-												<h3>Введите проверочный код</h3>
-												<div class="right-block">
-											<div class="form-control bg register-captcha captcha-row clearfix">
-												<div class="iblock label_block">
-													<label><span>Проверочный код&nbsp;<span class="star">*</span></span>
-													</label>
-													<div class="captcha_input">
-														<input type="text" class="inputtext captcha" name="captcha_word" size="30" maxlength="50" value="" required="" aria-required="true">
-													</div>
-													<div class="captcha_image">
-														<img src="../../bitrix/tools/captchacdea.jpg" border="0">
-														<input type="hidden" name="captcha_sid" value="0d0509085191c64f6b13e6e610a6b71d">
-														<div class="captcha_reload">Обновить</div>
-													</div>
-													
-												</div>
-												<div class="iblock text_block"></div>
-											</div>
-												</div>
-											</div>
-											<div class="right-block right-block-pad">
-											<div class="but-r">
-												<button class="button short" type="submit" name="register_submit_button1" value="Регистрация">
-													<span>Зарегистрироваться</span>
-												</button>
-												<div class="clearboth"></div>
-											</div>
-											</div>
-										</form>
-									</div>
-									<div class="social_block iblock">
-									</div>
+							<div class="module-order-history">
+								<div class="filter_block border_block">
+									<ul>
+										<li class="prop active">
+											<span>Все</span>
+										</li>
+										<li class="prop ">
+											<a href="/personal/history-of-orders/?filter_history=N&amp;filter_canceled=N">Текущие</a>
+										</li>
+										<li class="prop ">
+											<a href="/personal/history-of-orders/?filter_status=F&amp;filter_history=Y">Завершенные</a>
+										</li>
+										<li class="prop ">
+											<a href="/personal/history-of-orders/?filter_canceled=Y&amp;filter_history=Y">Отмененные</a>
+										</li>
+									</ul>
+									<div class="cls"></div>
 								</div>
+								<table class="module-orders-list colored">
+									<thead>
+										<tr>
+											<td class="item-name-th">Номер заказа</td>
+											<td class="date-th">Дата</td>
+											<td class="count-th">Количество</td>
+											<td class="price-th">Сумма</td>
+											<td class="pay-status-th">Оплата</td>
+											<td class="order-status-th">Статус</td>
+										</tr>
+									</thead>
+									<tbody>
+
+										<tr class="tr-d">
+											<td class="item-name-cell">
+												<a class="item_name"><span class="icon opener_icon"><i></i></span><span class="name">Заказ №2</span></a>
+
+												<span class="order-extra-properties">	
+							, <span class="item">
+								Дата: 03.05.2016,
+							</span>
+												<span class="item">
+								позиций:&nbsp;1,
+							</span>
+												<span class="item">
+								Сумма:&nbsp;
+								17 990 руб.							</span>
+												<span class="item">Оплата:&nbsp; 
+								<span class="pay-status-cell">Не оплачен</span>,
+												</span>
+												<span class="item">
+								Статус:&nbsp; 
+								Принят, ожидается оплата							</span>
+												</span>
+											</td>
+											<td class="date-cell"> 03.05.2016</td>
+											<td class="count-cell">1&nbsp;шт.</td>
+											<td class="price-cell">17 990 руб.</td>
+											<td class="pay-status-cell ">
+												Не оплачен </td>
+											<td class="order-status-cell">
+												<span class="status in-process">Принят, ожидается оплата</span> </td>
+										</tr>
+										<tr class="drop">
+											<td colspan="6" class="drop-cell wrap-all">
+												<div class="drop-container">
+													<table class="item-shell">
+														<thead>
+															<tr>
+																<td class="name-th">Наименование</td>
+																<td class="price-th">Цена</td>
+																<td class="count-th">Количество</td>
+																<td class="summ-th">Стоимость</td>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="name-cell">
+																	<a href="/catalog/foto_i_video/fotoapparaty/482/">Фотоаппарат зеркальный Sony SLT-A37K+SAL1855</a>
+																	<div class="item-extra-properties">
+																		17 990 руб. × 1 </div>
+																</td>
+																<td class="price-cell">
+																	17 990 руб. </td>
+																<td class="count-cell">1&nbsp;шт.</td>
+																<td class="summ-cell">
+																	17 990 руб. </td>
+															</tr>
+														</tbody>
+													</table>
+													<div class="result-row">
+														<div class="result">
+
+															<table cellspacing="0" cellpadding="0" border="0">
+																<tbody>
+																	<tr class="order_property price">
+																		<td class="name">Итого:</td>
+																		<td class="r">17 990 руб.</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!--noindex-->
+														<a href="/personal/history-of-orders/order_detail.php?ID=2" class="button msmall"><span>Подробнее</span></a>
+														<a href="/personal/history-of-orders/?ID=2&amp;COPY_ORDER=Y" class="button msmall"><span>Повторить заказ</span></a>
+														<a href="/personal/history-of-orders/order_cancel.php?ID=2&amp;CANCEL=Y" class="button msmall transparent"><span>Отменить заказ</span></a>
+														<!--/noindex-->
+													</div>
+												</div>
+											</td>
+										</tr>
+
+										<tr class="tr-d">
+											<td class="item-name-cell">
+												<a class="item_name"><span class="icon opener_icon"><i></i></span><span class="name">Заказ №1</span></a>
+
+												<span class="order-extra-properties">	
+							, <span class="item">
+								Дата: 03.05.2016,
+							</span>
+												<span class="item">
+								позиций:&nbsp;2,
+							</span>
+												<span class="item">
+								Сумма:&nbsp;
+								18 900 руб.							</span>
+												<span class="item">Оплата:&nbsp; 
+<!--												не добавлять класс not_payed и payed в <span class="pay-status-cell ">Не оплачен</span>-->
+								<span class="pay-status-cell ">Не оплачен</span>,
+												</span>
+												<span class="item">
+								Статус:&nbsp; 
+								Принят, ожидается оплата							</span>
+												</span>
+											</td>
+											<td class="date-cell"> 03.05.2016</td>
+											<td class="count-cell">2&nbsp;шт.</td>
+											<td class="price-cell">18 900 руб.</td>
+											<td class="pay-status-cell ">
+												Не оплачен </td>
+											<td class="order-status-cell">
+												<span class="status delivered ">Доставлен</span> </td>
+										</tr>
+										<tr class="drop">
+											<td colspan="6" class="drop-cell wrap-all">
+												<div class="drop-container">
+													<table class="item-shell">
+														<thead>
+															<tr>
+																<td class="name-th">Наименование</td>
+																<td class="price-th">Цена</td>
+																<td class="count-th">Количество</td>
+																<td class="summ-th">Стоимость</td>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="name-cell">
+																	<a href="/catalog/avtoelektronika/magnitoly/484/">Автомагнитола Intro CHR-2271</a>
+																	<div class="item-extra-properties">
+																		16 000 руб. × 1 </div>
+																</td>
+																<td class="price-cell">
+																	16 000 руб. </td>
+																<td class="count-cell">1&nbsp;шт.</td>
+																<td class="summ-cell">
+																	16 000 руб. </td>
+															</tr>
+															<tr>
+																<td class="name-cell">
+																	<a href="/catalog/avtoelektronika/magnitoly/485/">Автомагнитола JVC KD-LX50R</a>
+																	<div class="item-extra-properties">
+																		2 900 руб. × 1 </div>
+																</td>
+																<td class="price-cell">
+																	2 900 руб. </td>
+																<td class="count-cell">1&nbsp;шт.</td>
+																<td class="summ-cell">
+																	2 900 руб. </td>
+															</tr>
+														</tbody>
+													</table>
+													<div class="result-row">
+														<div class="result">
+
+															<table cellspacing="0" cellpadding="0" border="0">
+																<tbody>
+																	<tr class="order_property price">
+																		<td class="name">Итого:</td>
+																		<td class="r">18 900 руб.</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!--noindex-->
+														<a href="/personal/history-of-orders/order_detail.php?ID=1" class="button msmall"><span>Подробнее</span></a>
+														<a href="/personal/history-of-orders/?ID=1&amp;COPY_ORDER=Y" class="button msmall"><span>Повторить заказ</span></a>
+														<a href="/personal/history-of-orders/order_cancel.php?ID=1&amp;CANCEL=Y" class="button msmall transparent"><span>Отменить заказ</span></a>
+														<!--/noindex-->
+													</div>
+												</div>
+											</td>
+										</tr>
+										
+										<tr class="tr-d">
+											<td class="item-name-cell">
+												<a class="item_name"><span class="icon opener_icon"><i></i></span><span class="name">Заказ №3</span></a>
+
+												<span class="order-extra-properties">	
+							, <span class="item">
+								Дата: 03.05.2016,
+							</span>
+												<span class="item">
+								позиций:&nbsp;2,
+							</span>
+												<span class="item">
+								Сумма:&nbsp;
+								18 900 руб.							</span>
+												<span class="item">Оплата:&nbsp; 
+<!--												не добавлять класс not_payed и payed в <span class="pay-status-cell ">Не оплачен</span>-->
+								<span class="pay-status-cell ">Не оплачен</span>,
+												</span>
+												<span class="item">
+								Статус:&nbsp; 
+								Принят, ожидается оплата							</span>
+												</span>
+											</td>
+											<td class="date-cell"> 03.05.2016</td>
+											<td class="count-cell">2&nbsp;шт.</td>
+											<td class="price-cell">18 900 руб.</td>
+											<td class="pay-status-cell ">
+												Не оплачен </td>
+											<td class="order-status-cell">
+												<span class="status canceled ">Отменен</span> </td>
+										</tr>
+										<tr class="drop">
+											<td colspan="6" class="drop-cell wrap-all">
+												<div class="drop-container">
+													<table class="item-shell">
+														<thead>
+															<tr>
+																<td class="name-th">Наименование</td>
+																<td class="price-th">Цена</td>
+																<td class="count-th">Количество</td>
+																<td class="summ-th">Стоимость</td>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td class="name-cell">
+																	<a href="/catalog/avtoelektronika/magnitoly/484/">Автомагнитола Intro CHR-2271</a>
+																	<div class="item-extra-properties">
+																		16 000 руб. × 1 </div>
+																</td>
+																<td class="price-cell">
+																	16 000 руб. </td>
+																<td class="count-cell">1&nbsp;шт.</td>
+																<td class="summ-cell">
+																	16 000 руб. </td>
+															</tr>
+															<tr>
+																<td class="name-cell">
+																	<a href="/catalog/avtoelektronika/magnitoly/485/">Автомагнитола JVC KD-LX50R</a>
+																	<div class="item-extra-properties">
+																		2 900 руб. × 1 </div>
+																</td>
+																<td class="price-cell">
+																	2 900 руб. </td>
+																<td class="count-cell">1&nbsp;шт.</td>
+																<td class="summ-cell">
+																	2 900 руб. </td>
+															</tr>
+														</tbody>
+													</table>
+													<div class="result-row">
+														<div class="result">
+
+															<table cellspacing="0" cellpadding="0" border="0">
+																<tbody>
+																	<tr class="order_property price">
+																		<td class="name">Итого:</td>
+																		<td class="r">18 900 руб.</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<!--noindex-->
+														<a href="/personal/history-of-orders/order_detail.php?ID=1" class="button msmall"><span>Подробнее</span></a>
+														<a href="/personal/history-of-orders/?ID=1&amp;COPY_ORDER=Y" class="button msmall"><span>Повторить заказ</span></a>
+														<a href="/personal/history-of-orders/order_cancel.php?ID=1&amp;CANCEL=Y" class="button msmall transparent"><span>Отменить заказ</span></a>
+														<!--/noindex-->
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+
+								<script>
+									$('.tr-d td').on('click', function (e) {
+										e.preventDefault();
+										$(this).parents("tr").toggleClass("opened").next("tr.drop").find(".drop-cell").slideToggle(200).find(".drop-container").slideToggle(200);
+									});
+								</script>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</section>
