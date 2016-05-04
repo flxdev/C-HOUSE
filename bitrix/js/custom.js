@@ -114,6 +114,57 @@ $(document).ready(function () {
 	});
 
 	
+	$('.item1').on('click', function() {
+    var attr_name = $(this).attr('rel');
+    var attr_length = $(this).attr('rel', attr_name).parents('.catalog-project').find('a').length;
+    $(".item1.fancy").fancybox({
+        maxWidth: '800',
+        openEffect: 'elastic',
+        closeEffect: 'elastic',
+        scrolling: 'no',
+        index: 1,
+        padding: 0,
+        tpl: {
+            wrap: '<div class="fancybox-wrap" tabIndex="1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"><div class="counter"><div class="count_elem"><span class="current"></span><span class="all"></span></div></div></div></div></div></div>',
+        },
+        afterShow: function () {
+            $('.all').text(attr_length);            
+            $('.current').text($.fancybox.current.index + 1);
+
+        },
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+    });
+})
+	
+		$('.item2').on('click', function() {
+    var attr_name = $(this).attr('rel');
+    var attr_length = $(this).attr('rel', attr_name).parents('.sertificate-block-gallery').find('.item2').length;
+    $(".item2.fancy").fancybox({
+        maxWidth: '800',
+        openEffect: 'elastic',
+        closeEffect: 'elastic',
+        scrolling: 'no',
+        index: 1,
+        padding: 0,
+        tpl: {
+            wrap: '<div class="fancybox-wrap" tabIndex="1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"><div class="counter"><div class="count_elem"><span class="current"></span><span class="all"></span></div></div></div></div></div></div>',
+        },
+        afterShow: function () {
+            $('.all').text(attr_length);            
+            $('.current').text($.fancybox.current.index + 1);
+
+        },
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+    });
+})
 		
 		
 	});
