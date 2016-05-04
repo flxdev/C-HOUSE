@@ -994,8 +994,48 @@
 	</script>
 	<!--'end_frame_cache_basketitems-block'-->
 	<div id="content_new"></div>
+	
+	<div class="recovery_password_frame popup jqmID6 show" style="z-index: 3000; display: block; margin-left: -210px; top: 156.5px;">
+		<div class="popup-intro">
+			<div class="pop-up-title">Восстановление пароля</div>
+		</div>
+		<a class="jqmClose close"><i></i></a>
+	<div class="form-wr">
+		<form method="post" id="recovery_password_frame" action="/bitrix/components/aspro/oneclickbuy.mshop/script.php" novalidate="novalidate">
+				
+							<div class="r form-control bg">
+								<label class="" for="USER_LOGIN_POPUP">Электронный адрес<span class="star">*</span></label>
+								<input type="text" name="USER_LOGIN" id="USER_LOGIN_POPUP" class="required" maxlength="50" value="info@mail.ru" placeholder="info@mail.ru" autocomplete="on" tabindex="1" aria-required="true" aria-invalid="true">
+							</div>
+							<p class="hint-text">Если вы забыли пароль, введите логин или E-Mail. Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail. </p>
+
+
+						<div class="but-r clearfix">
+				<!--noindex-->
+					<button class="button short" type="submit" id="one_click_buy_form_button" name="one_click_buy_form_button" value="Отправить"><span>Восстановить</span></button>
+									<!--/noindex-->
+			</div>
+										<input type="hidden" name="IBLOCK_ID" value="32">
+										<input type="hidden" name="ELEMENT_ID" value="488">
+										<input type="hidden" name="ELEMENT_QUANTITY" value="1">
+									<input type="hidden" name="CURRENCY" value="RUB">
+			<input type="hidden" name="SITE_ID" value="s1">
+			<input type="hidden" name="PROPERTIES" value="a:3:{i:0;s:3:&quot;FIO&quot;;i:1;s:5:&quot;PHONE&quot;;i:2;s:7:&quot;COMMENT&quot;;}">
+			<input type="hidden" name="PAY_SYSTEM_ID" value="1">
+			<input type="hidden" name="DELIVERY_ID" value="1">
+			<input type="hidden" name="PERSON_TYPE_ID" value="1">
+			<input type="hidden" name="sessid" id="sessid" value="08ba6656dff3fdae869750ccad18388d">	
+		</form>
+		<div class="one_click_buy_result" id="one_click_buy_result">
+			<div class="one_click_buy_result_success">Спасибо за заказ!</div>
+			<div class="one_click_buy_result_fail">Ошибка!</div>
+			<div class="one_click_buy_result_text">В ближайшее время наш менеджер свяжется с вами.</div>
+		</div>
+	</div>
+</div>
+	
 </body>
 
-<!-- Mirrored from alarm.flxmd.by/basket/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Apr 2016 11:33:24 GMT -->
+
 
 </html>

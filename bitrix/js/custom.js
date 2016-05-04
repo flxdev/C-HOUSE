@@ -164,7 +164,22 @@ $(document).ready(function () {
             }
         }
     });
-})
+});
+	
+	
+	$(function (){
+		if($('.choose_file').length){
+			$('.choose_file').click(function(){
+			$('#choose_file_input').click();
+		return(false);
+		});
+
+		$('#choose_file_input').change(function(){
+		$('#choose_file_text').html($(this).val());
+		}).change(); // .change() в конце для того чтобы событие сработало при обновлении страницы
+		}
+	});
+		
 		
 		
 	});

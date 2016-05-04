@@ -2742,7 +2742,8 @@ textarea{
 	display: none;
 }
 	
-.fancybox-close{
+.fancybox-close,
+.popup .close{
 	color: #fff;
 	font-size: 14px;
 	line-height: 56px;
@@ -2756,13 +2757,19 @@ textarea{
 	width: auto;
 	height: 56px;
 	transition: color 0.3s ease, background 0.3s ease;
-}	
+}
+
+.popup .close i{
+	    background: transparent;
+}
 	
-.fancybox-close::after{
+.fancybox-close::after,
+.popup.show .close ::after{
 	content: 'Закрыть';
 }	
 	
-.fancybox-close:hover{
+.fancybox-close:hover,
+.popup.show .close:hover{
 	color: #f1c40f;
 	background: url('../../bitrix/images/svg/2-3/close-hover.svg') center no-repeat;
 	background-size: 12px 12px;
@@ -6442,4 +6449,175 @@ table.title-search-result td.title-search-all{
 	line-height: 56px;
     right: 17px;
 	top: -8px;
+}
+
+/* form-control error */
+
+.form-control.error input{
+	border-color: #e62727;
+	background: url('../images/svg/1-5/mistake.svg') right center no-repeat;
+	background-position: center  right 10px;
+	background-size: 20px;
+}
+
+label.error{
+	color: transparent!important;	
+}
+
+/* popups */
+
+
+.popup .close{
+	    right: -135px
+}
+
+.popup .close i{
+	width: auto;
+}
+
+.form_result.success{
+	color: #393939;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: 0.03em;
+}
+
+.popup > div,
+.popup .popup-intro{
+	width: 660px;
+    background: #fff;
+}
+
+.popup .more_text_small{
+	color: #393939;
+}
+
+.popup .form_head,
+.popup .popup-intro{
+	background: #f6f6f6 !important;
+	text-align: center;
+}
+
+.popup .form_head .subtitle{
+	font-size: 18px;
+	line-height: 16px;
+	letter-spacing: 0.05em;
+	margin-top: 10px;
+	font-weight: bold;
+	color: #393939;
+	margin-bottom: 10px;
+}
+
+.popup .form .form_head,
+.popup .popup-intro{
+	border-bottom: none;
+}
+
+.popup .form-control input:focus{
+	border-color: #f1c40f;
+}
+
+.resume_frame.popup .form-control,
+.question_frame.popup .form-control:not(.textarea),
+.popup #one_click_buy_form .form-control{
+    margin: 0px 0px 19px;
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 10px;
+	z-index: 1;
+}
+
+.popup .pop-up-title{
+	    font-family: 'Conv_Pragmatica Condensed Black', Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    line-height: 46px;
+    letter-spacing: 0.03em;
+    color: #393939;
+    text-transform: uppercase;
+}
+
+.question_frame.popup .form-control,
+.popup #one_click_buy_form .form-control:nth-child(3),
+.popup #recovery_password_frame .form-control{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+
+.popup .form-wr {
+    box-sizing: border-box;
+}
+
+.form-control label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 15px;
+	color: #393939;
+}
+
+.popup .form .form_footer,
+.popup #avtorization-form .buttons,
+.popup #one_click_buy_form .but-r,
+.popup #recovery_password_frame .but-r{
+	text-align: center;
+}
+
+.popup .form .form_footer .button.medium,
+.popup #avtorization-form .buttons button,
+.popup #one_click_buy_form .but-r button,
+.popup #recovery_password_frame .button{
+/*	width: 327px;*/
+	height: 50px;
+	line-height: 50px;
+	padding: 0 80px !important;
+	font-size: 14px;
+	letter-spacing: 0.05em;
+	background: #5ce1a1;
+	padding: 0;
+	font-weight: bold;
+	border-radius: 0;
+	transition: background 0.3s ease;
+}
+
+
+.popup .form .form_footer .button.medium:hover,
+.popup #avtorization-form .buttons button:hover,
+.popup #one_click_buy_form .but-r button:hover,
+.popup #recovery_password_frame .button:hover{
+	background: #f1c40f;
+}
+
+#choose_file_input{
+	display: none;
+}
+
+.choose_file,
+.forgot{
+	color: #5be1a1;
+	border-bottom: 1px dotted;
+	font-size: 14px;
+	letter-spacing: 28px;
+	line-height: 28px;
+	letter-spacing: 0.03em;
+	transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.forgot{
+	border-bottom: 1px dotted transparent;
+}
+
+.choose_file:hover,
+.forgot:hover{
+	color: #f1c40f;
+	border-bottom: 1px dotted transparent;
+}
+
+.popup .hint-text{
+	color: #9c9c9c;
+	font-size: 12px;
+	line-height: 20px;
+	letter-spacing: 0.03em;
+	padding: 0 10px;
+	margin: 20px 0 40px !important;
 }

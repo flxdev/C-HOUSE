@@ -11,8 +11,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="keywords" content="интернет-магазин, заказать, купить" />
 	<meta name="description" content="Универсальный интернет-магазин" />
-	<link href="http://alarm.flxmd.by/bitrix/cache/css/s1/aspro_mshop/kernel_main/kernel_main.css?146012395148075" type="text/css" rel="stylesheet" />
-	<link href="http://alarm.flxmd.by/bitrix/cache/css/s1/aspro_mshop/template_3f88932f9d77ab339d9b5f92cc37ef51/template_3f88932f9d77ab339d9b5f92cc37ef51.css?1460372274416299" type="text/css" data-template-style="true" rel="stylesheet" />
+	<link href="../../bitrix/cache/css/s1/aspro_mshop/kernel_main/kernel_mainb040.css" type="text/css" rel="stylesheet" />
+	<link href="../../bitrix/cache/css/s1/aspro_mshop/template_3f88932f9d77ab339d9b5f92cc37ef51/template_3f88932f9d77ab339d9b5f92cc37ef5179e7.css" type="text/css" data-template-style="true" rel="stylesheet" />
 	<link href="../../bitrix/css/custom.css" type="text/css" data-template-style="true" rel="stylesheet" />
 	<script type="text/javascript">
 		if (!window.BX) window.BX = {
@@ -1118,6 +1118,111 @@
 	</script>
 	<!--'end_frame_cache_basketitems-block'-->
 	<div id="content_new"></div>
+	
+<!--	попап заказать встречу -->
+	
+	<div class="question_frame popup jqmID6 show" style="z-index: 3000; display: block; margin-left: -260px; top: 448px;">
+		<div id="comp_63c06bb35ff0053f319930a0d3af4c28">
+			<a href="#" class="close jqmClose"><i></i></a>
+			<div class="form RESUME">
+				<div class="form_head">
+					<h2>Задайте вопрос</h2>
+				</div>
+
+				<form name="RESUME" action="/ajax/form.php?form_id=RESUME" method="POST" enctype="multipart/form-data" novalidate="novalidate">
+					<input type="hidden" name="bxajaxid" id="bxajaxid_63c06bb35ff0053f319930a0d3af4c28_8BACKi" value="63c06bb35ff0053f319930a0d3af4c28">
+					<input type="hidden" name="AJAX_CALL" value="Y">
+					<input type="hidden" name="sessid" id="sessid" value="0a321daa484a922a49976fad53c08e1d">
+					<input type="hidden" name="WEB_FORM_ID" value="4">
+					<input type="hidden" name="sessid" id="sessid_1" value="0a321daa484a922a49976fad53c08e1d">
+					<div class="form_body">
+						<div class="form-control">
+							<label><span>Ваше имя&nbsp;<span class="star">*</span></span>
+							</label>
+							<input type="text" class="inputtext" data-sid="CLIENT_NAME" required="" name="form_text_16" value="" size="0" aria-required="true"> </div>
+
+						<div class="form-control">
+							<label><span>Электронная почта&nbsp;<span class="star">*</span></span></label>
+							<input type="email" placeholder="info@gmail.com" class="inputtext" data-sid="EMAIL" name="form_email_18" value="" size="0"> </div>
+							<div class="form-control">
+				<label><span>Телефон&nbsp;<span class="star">*</span></span></label>
+								<input type="text" class="phone" data-sid="PHONE" required="" name="form_text_17" value="" size="0" aria-required="true">			</div>
+								<div class="form-control">
+									<label><span>Дизайнер или архитектор&nbsp;<span class="star">*</span></span></label>
+								<div class="">
+																	<select>
+																		
+																		<option>Михаил Хворостовский</option>
+																		<option>Михаил Хворостовский1</option>
+																		<option>Михаил Хворостовский2</option>
+																		<option>Михаил Хворостовский3</option>
+																		<option>Михаил Хворостовский4</option>
+																	</select>
+																	</div>	</div>
+							<div class="form-control textarea">
+							<label><span>Сообщение&nbsp;<span class="star">*</span></span>
+							</label>
+								<textarea type="text" class="inputtext" data-sid="CLIENT_NAME" required="" name="form_text_16" value="" size="0" aria-required="true" placeholder="Задайте интересующий вопрос"></textarea> </div>
+					
+						<div class="clearboth"></div>
+						<div class="clearboth"></div>
+					</div>
+					<div class="form_footer">
+						<button type="submit" class="button medium" value="submit" name="web_form_submit"><span>Отправить</span></button>
+
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--	попап обратная связь -->
+	
+	<div class="question_frame popup jqmID6 show" style="z-index: 3000; display: block; margin-left: -260px; top: 448px;">
+		<div id="comp_63c06bb35ff0053f319930a0d3af4c28">
+			<a href="#" class="close jqmClose"><i></i></a>
+			<div class="form RESUME">
+				<div class="form_head">
+					<h2>обратная связь</h2>
+				</div>
+
+				<form name="RESUME" action="/ajax/form.php?form_id=RESUME" method="POST" enctype="multipart/form-data" novalidate="novalidate">
+					<input type="hidden" name="bxajaxid" id="bxajaxid_63c06bb35ff0053f319930a0d3af4c28_8BACKi" value="63c06bb35ff0053f319930a0d3af4c28">
+					<input type="hidden" name="AJAX_CALL" value="Y">
+					<input type="hidden" name="sessid" id="sessid" value="0a321daa484a922a49976fad53c08e1d">
+					<input type="hidden" name="WEB_FORM_ID" value="4">
+					<input type="hidden" name="sessid" id="sessid_1" value="0a321daa484a922a49976fad53c08e1d">
+					<div class="form_body">
+						<div class="form-control">
+							<label><span>Ваше имя&nbsp;<span class="star">*</span></span>
+							</label>
+							<input type="text" class="inputtext" data-sid="CLIENT_NAME" required="" name="form_text_16" value="" size="0" aria-required="true"> </div>
+
+					
+							<div class="form-control">
+				<label><span>Телефон&nbsp;<span class="star">*</span></span></label>
+								<input type="text" class="phone" data-sid="PHONE" required="" name="form_text_17" value="" size="0" aria-required="true">			</div>
+								
+							<div class="form-control textarea">
+							<label><span>Сообщение&nbsp;<span class="star">*</span></span>
+							</label>
+								<textarea type="text" class="inputtext" data-sid="CLIENT_NAME" required="" name="form_text_16" value="" size="0" aria-required="true" placeholder="Задайте интересующий вопрос"></textarea> </div>
+					
+						<div class="clearboth"></div>
+						<div class="clearboth"></div>
+					</div>
+					<div class="form_footer">
+						<button type="submit" class="button medium" value="submit" name="web_form_submit"><span>Отправить</span></button>
+
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	
 </body>
 
 </html>
