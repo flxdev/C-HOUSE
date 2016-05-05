@@ -179,7 +179,19 @@ $(document).ready(function () {
 		}).change(); // .change() в конце для того чтобы событие сработало при обновлении страницы
 		}
 	});
-		
+	
+	
+//	var countSlide = $('.swiper-container-main .swiper-slide').not('.swiper-slide-duplicate').length;
+//	console.log(countSlide);
+//	
+//	if (countSlide < 10){
+//       var text = $('.swiper-pagination-total').text();
+//       var textCur = $('.swiper-pagination-current').text()
+//	   $('.swiper-pagination-total').text('0' + text); 
+//        $('.swiper-pagination-current').text('0' + swiper.activeIndex);
+//      }else{
+//         
+//      }
 		
 		
 	});
