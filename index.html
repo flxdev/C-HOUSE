@@ -410,7 +410,7 @@
 							<td class="center_block">
 								<div class="search">
 									<div id="title-search" class="stitle_form">
-									
+
 										<form action="/catalog/">
 											<div class="form-control bg">
 												<input id="title-searchs-input" type="text" name="q" value="" class="small_block" size="40" class="text" maxlength="50" autocomplete="off" placeholder="Поиск по сайту" />
@@ -521,13 +521,18 @@
 															<div class="basket_empty clearfix">
 																<table cellspacing="0" cellpadding="0" border="0" width="100%">
 																	<tr>
+<!--delete
 																		<td class="image">
 																			<div></div>
 																		</td>
+-->
 																		<td class="description">
-																			<div class="basket_empty_subtitle">К сожалению, ваша корзина пуста.</div>
-																			<div class="basket_empty_description">Исправить это недоразумение очень просто:
-																				<br />выберите в каталоге интересующий товар и нажмите кнопку &laquo;В корзину&raquo;.</div>
+																			<div class="basket_empty_subtitle">К сожалению ваша корзина пуста. Начните покупки в нашем интернет- магазине прямо сейчас! </div>
+																			<div class="basket_empty_description">
+																				<a class="button transparent big_btn grey_br continue start-shopping" href="/catalog/">
+																					<span>Начать покупки</span>
+																				</a>
+																			</div>
 																		</td>
 																	</tr>
 																</table>
@@ -575,7 +580,7 @@
 					<div class="wrapper_inner">
 						<div class="wrapper_middle_menu">
 							<ul class="menu bottom menu-left">
-								
+
 								<li class="menu_item_l1 ">
 									<a class="" href="catalog/odezhda/index.html"><span>Строительные материалы</span></a>
 									<div class="child submenu">
@@ -661,7 +666,7 @@
 										</div>
 									</div>
 								</li>
-<!--
+								<!--
 								<li class="more menu_item_l1">
 									<a>Еще<i></i></a>
 									<div class="child cat_menu">
@@ -669,10 +674,10 @@
 									</div>
 								</li>
 -->
-<!--								<li class="stretch"></li>-->
+								<!--								<li class="stretch"></li>-->
 							</ul>
 							<ul class="menu bottom menu-right">
-								
+
 								<li class="menu_item_l1">
 									<a class="" href="company/index.html"><span>О компании</span></a>
 									<div class="child submenu">
@@ -691,92 +696,92 @@
 								<li class="menu_item_l1">
 									<a class="" href="sale/index.html"><span>Новости и акции</span></a>
 								</li>
-								
+
 								<li class="menu_item_l1">
 									<a class="" href="sale/index.html"><span>Контакты</span></a>
 								</li>
-								
+
 							</ul>
-							
+
 							<script type="text/javascript">
-//								var menu = $('.catalog_menu ul.menu');
-//								var extendedItemsContainer = $(menu).find('li.more');
-//								var extendedItemsSubmenu = $(extendedItemsContainer).find('.child_wrapp');
-//								var extendedItemsContainerWidth = $(extendedItemsContainer).outerWidth();
-//
-//								var reCalculateMenu = function () {
-//									$(menu).find('li:not(.stretch)').show();
-//									$(extendedItemsSubmenu).html('');
-//									$(extendedItemsContainer).removeClass('visible');
-//									calculateMenu();
-//								}
-//
-//								var calculateMenu = function () {
-//									var menuWidth = $(menu).outerWidth();
-//									$(menu).css('display', '');
-//									$('.catalog_menu .menu > li').each(function (index, element) {
-//										if (!$(element).is('.more') && !$(element).is('.stretch')) {
-//											var itemOffset = $(element).position().left;
-//											var itemWidth = $(element).outerWidth();
-//											var submenu = $(element).find('.submenu');
-//											var submenuWidth = $(submenu).outerWidth();
-//											if ($(submenu).length) {
-//												if (index != 0) {
-//													$(submenu).css({
-//														'marginLeft': (itemWidth - submenuWidth) / 2
-//													});
-//												}
-//											}
-//											var bLast = index == $('.catalog_menu .menu > li').length - 3;
-//
-//											if (itemOffset + itemWidth + (bLast ? 0 : extendedItemsContainerWidth) > menuWidth || $(extendedItemsContainer).is('.visible')) {
-//												if (!$(extendedItemsContainer).is('.visible')) {
-//													$(extendedItemsContainer).addClass('visible').css('display', '');
-//												}
-//												var menuItem = $(element).clone();
-//
-//												var menuItemTitleA = $(menuItem).find('> a');
-//												$(menuItem).find('.depth3').find('a:not(.title)').remove();
-//												$(menuItem).wrapInner('<ul ' + (($(extendedItemsSubmenu).find('> ul').length % 3 == 2) ? 'class="last"' : '') + '></ul>');
-//												$(menuItem).find('ul').prepend('<li class="menu_title ' + $(menuItem).attr('class') + '"><a href="' + menuItemTitleA.attr('href') + '">' + menuItemTitleA.text() + '</a></li>');
-//												$(menuItem).find('ul > li').removeClass('menu_item_l1');
-//												menuItemTitleA.remove();
-//												$(menuItem).find('.child_wrapp > a').each(function () {
-//													$(this).wrap('<li class="menu_item"></li>');
-//												});
-//												$(menuItem).find('.child_wrapp > .depth3').each(function () {
-//													$(this).find('a.title').wrap('<li class="menu_item"></li>');
-//												});
-//												$(menuItem).find('li.menu_item').each(function () {
-//													$(menuItem).find('ul').append('<li class="menu_item ' + $(this).find('> a').attr('class') + '" style="' + $(this).find('> a').attr('style') + '">' + $(this).html() + '</li>');
-//												});
-//												$(menuItem).find('.child.submenu').remove();
-//
-//
-//												$(extendedItemsSubmenu).append($(menuItem).html());
-//												$(element).hide();
-//											} else {
-//												$(element).show();
-//												if (bLast) {
-//													$(element).css('border-right-width', '0px');
-//												}
-//											}
-//										}
-//										if (!extendedItemsSubmenu.html().length) {
-//											extendedItemsContainer.hide();
-//										}
-//									});
-//									$('.catalog_menu .menu .see_more a.see_more').removeClass('see_more');
-//									$('.catalog_menu .menu li.menu_item a').removeClass('d');
-//									$('.catalog_menu .menu li.menu_item a').removeAttr('style');
-//								}
-//
-//								if ($(window).outerWidth() > 600) {
-//									calculateMenu();
-//									$(window).load(function () {
-//										reCalculateMenu();
-//									});
-//								}
+								//								var menu = $('.catalog_menu ul.menu');
+								//								var extendedItemsContainer = $(menu).find('li.more');
+								//								var extendedItemsSubmenu = $(extendedItemsContainer).find('.child_wrapp');
+								//								var extendedItemsContainerWidth = $(extendedItemsContainer).outerWidth();
+								//
+								//								var reCalculateMenu = function () {
+								//									$(menu).find('li:not(.stretch)').show();
+								//									$(extendedItemsSubmenu).html('');
+								//									$(extendedItemsContainer).removeClass('visible');
+								//									calculateMenu();
+								//								}
+								//
+								//								var calculateMenu = function () {
+								//									var menuWidth = $(menu).outerWidth();
+								//									$(menu).css('display', '');
+								//									$('.catalog_menu .menu > li').each(function (index, element) {
+								//										if (!$(element).is('.more') && !$(element).is('.stretch')) {
+								//											var itemOffset = $(element).position().left;
+								//											var itemWidth = $(element).outerWidth();
+								//											var submenu = $(element).find('.submenu');
+								//											var submenuWidth = $(submenu).outerWidth();
+								//											if ($(submenu).length) {
+								//												if (index != 0) {
+								//													$(submenu).css({
+								//														'marginLeft': (itemWidth - submenuWidth) / 2
+								//													});
+								//												}
+								//											}
+								//											var bLast = index == $('.catalog_menu .menu > li').length - 3;
+								//
+								//											if (itemOffset + itemWidth + (bLast ? 0 : extendedItemsContainerWidth) > menuWidth || $(extendedItemsContainer).is('.visible')) {
+								//												if (!$(extendedItemsContainer).is('.visible')) {
+								//													$(extendedItemsContainer).addClass('visible').css('display', '');
+								//												}
+								//												var menuItem = $(element).clone();
+								//
+								//												var menuItemTitleA = $(menuItem).find('> a');
+								//												$(menuItem).find('.depth3').find('a:not(.title)').remove();
+								//												$(menuItem).wrapInner('<ul ' + (($(extendedItemsSubmenu).find('> ul').length % 3 == 2) ? 'class="last"' : '') + '></ul>');
+								//												$(menuItem).find('ul').prepend('<li class="menu_title ' + $(menuItem).attr('class') + '"><a href="' + menuItemTitleA.attr('href') + '">' + menuItemTitleA.text() + '</a></li>');
+								//												$(menuItem).find('ul > li').removeClass('menu_item_l1');
+								//												menuItemTitleA.remove();
+								//												$(menuItem).find('.child_wrapp > a').each(function () {
+								//													$(this).wrap('<li class="menu_item"></li>');
+								//												});
+								//												$(menuItem).find('.child_wrapp > .depth3').each(function () {
+								//													$(this).find('a.title').wrap('<li class="menu_item"></li>');
+								//												});
+								//												$(menuItem).find('li.menu_item').each(function () {
+								//													$(menuItem).find('ul').append('<li class="menu_item ' + $(this).find('> a').attr('class') + '" style="' + $(this).find('> a').attr('style') + '">' + $(this).html() + '</li>');
+								//												});
+								//												$(menuItem).find('.child.submenu').remove();
+								//
+								//
+								//												$(extendedItemsSubmenu).append($(menuItem).html());
+								//												$(element).hide();
+								//											} else {
+								//												$(element).show();
+								//												if (bLast) {
+								//													$(element).css('border-right-width', '0px');
+								//												}
+								//											}
+								//										}
+								//										if (!extendedItemsSubmenu.html().length) {
+								//											extendedItemsContainer.hide();
+								//										}
+								//									});
+								//									$('.catalog_menu .menu .see_more a.see_more').removeClass('see_more');
+								//									$('.catalog_menu .menu li.menu_item a').removeClass('d');
+								//									$('.catalog_menu .menu li.menu_item a').removeAttr('style');
+								//								}
+								//
+								//								if ($(window).outerWidth() > 600) {
+								//									calculateMenu();
+								//									$(window).load(function () {
+								//										reCalculateMenu();
+								//									});
+								//								}
 
 								$(document).ready(function () {
 									$('.catalog_menu .menu > li:not(.current):not(.more):not(.stretch) > a').click(function () {
@@ -796,13 +801,14 @@
 			</header>
 		</div>
 		<div class="wrapper_inner without-padding">
-		<!-- Swiper -->
+			<!-- Swiper -->
 			<div class="swiper-container-main">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img src="bitrix/images/main-slider/slide1.jpg" alt="">
 						<div class="text">
-							<p class="title">корпусная мебель <br>для интерьеров</p>
+							<p class="title">корпусная мебель
+								<br>для интерьеров</p>
 							<p class="subtitle">Производство мебели — это творчество в чистом виде. Мы воплощаем самые неординарные идеи в любом стиле. Вся мебель сочетает функциональность, экологичность и долговечность. А главное, мы производим монтажные работы.</p>
 							<ul class="nav">
 								<li><a href="#">Эксклюзивная мебель </a></li>
@@ -815,7 +821,8 @@
 					<div class="swiper-slide">
 						<img src="bitrix/images/main-slider/slide2.jpg" alt="">
 						<div class="text">
-							<p class="title">корпусная мебель <br>для интерьеров</p>
+							<p class="title">корпусная мебель
+								<br>для интерьеров</p>
 							<p class="subtitle">Производство мебели — это творчество в чистом виде. Мы воплощаем самые неординарные идеи в любом стиле. Вся мебель сочетает функциональность, экологичность и долговечность. А главное, мы производим монтажные работы.</p>
 							<ul class="nav">
 								<li><a href="#">Эксклюзивная мебель </a></li>
@@ -828,7 +835,8 @@
 					<div class="swiper-slide">
 						<img src="bitrix/images/main-slider/slide3.jpg" alt="">
 						<div class="text">
-							<p class="title">корпусная мебель <br>для интерьеров</p>
+							<p class="title">корпусная мебель
+								<br>для интерьеров</p>
 							<p class="subtitle">Производство мебели — это творчество в чистом виде. Мы воплощаем самые неординарные идеи в любом стиле. Вся мебель сочетает функциональность, экологичность и долговечность. А главное, мы производим монтажные работы.</p>
 							<ul class="nav">
 								<li><a href="#">Эксклюзивная мебель </a></li>
@@ -1028,9 +1036,9 @@
 				<div class="tab_slider_wrapp specials s_OjZWRN4FhQ best_block">
 					<div class="top_blocks">
 						<div class="title_block">
-							<a href="#" class="title">Строительные материалы</a>
+							<a href="#" class="title title-main">Строительные материалы</a>
 						</div>
-						<ul class="tabs">
+						<ul class="tabs tabs-main">
 							<li data-code="HIT" class='cur'><span>Хиты продаж</span></li>
 							<!--																	<li data-code="RECOMMEND" ><span>Советуем</span></li>-->
 							<li data-code="NEW"><span>Новинка</span></li>
@@ -1070,7 +1078,9 @@
 										<div class="item-title">
 											<a href="catalog/foto_i_video/obektivy/488/index.html"><span>Объектив Canon EF24-105 F4L IS USM</span></a>
 										</div>
-										<div class="item-stock"><span class="icon stock"></span><span class="value">40 000 руб.</span></div>
+										<div class="item-stock">
+<!--										here and further delete this span in all pages <span class="icon stock"></span>-->
+										<span class="value">40 000 руб.</span></div>
 										<div class="cost prices clearfix">
 											<div class="price">37 000 руб. </div>
 										</div>
@@ -1101,7 +1111,7 @@
 										<div class="item-title">
 											<a href="catalog/avtoelektronika/magnitoly/485/index.html"><span>Автомагнитола JVC KD-LX50R</span></a>
 										</div>
-										<div class="item-stock"><span class="icon stock"></span><span class="value"></span></div>
+										<div class="item-stock"><span class="value"></span></div>
 										<div class="cost prices clearfix">
 											<div class="price">2 900 руб. </div>
 										</div>
@@ -1133,7 +1143,7 @@
 										<div class="item-title">
 											<a href="catalog/foto_i_video/fotoapparaty/482/index.html"><span>Фотоаппарат зеркальный Sony SLT-A37K+SAL1855</span></a>
 										</div>
-										<div class="item-stock"><span class="icon stock"></span><span class="value"></span></div>
+										<div class="item-stock"><span class="value"></span></div>
 										<div class="cost prices clearfix">
 											<div class="price">17 990 руб. </div>
 										</div>
@@ -1164,7 +1174,7 @@
 										<div class="item-title">
 											<a href="catalog/elektroinstrument/perforatory/444/index.html"><span>Перфоратор Bosch Professional GBH 2-26</span></a>
 										</div>
-										<div class="item-stock"><span class="icon stock"></span><span class="value"></span></div>
+										<div class="item-stock"><span class="value"></span></div>
 										<div class="cost prices clearfix">
 											<div class="price">3 436 руб. </div>
 										</div>
@@ -1200,7 +1210,7 @@
 										<div class="item-title">
 											<a href="catalog/sport/velosipedy/496/index.html"><span>Велосипед Stern Air 1.0</span></a>
 										</div>
-										<div class="item-stock"><span class="icon stock"></span><span class="value"></span></div>
+										<div class="item-stock"><span class="value"></span></div>
 										<div class="cost prices clearfix">
 											<div class="price">20 999 руб. </div>
 										</div>
@@ -1233,7 +1243,7 @@
 										<div class="item-title">
 											<a href="catalog/sport/velosipedy/495/index.html"><span>Велосипед Stern Dynamic 1.0</span></a>
 										</div>
-										<div class="item-stock"><span class="icon stock"></span><span class="value"></span></div>
+										<div class="item-stock"><span class="value"></span></div>
 										<div class="cost prices clearfix">
 											<div class="price">6 999 руб. </div>
 										</div>
@@ -2058,13 +2068,13 @@
 									<p class="name">Егор Малышев </p>
 									<p class="position">Дизайнер интерьеров</p>
 								</div>
-							</figcaption> 
-							   
+							</figcaption>
+
 						</figure>
 						<figure class="designer-portfolio">
-						<div class="image">
+							<div class="image">
 								<img src="bitrix/images/slider-designer/work1.jpg" alt="">
-							</div>  
+							</div>
 							<figcaption>
 								<div>
 									<span class="quote">Создавая проекты, в первую очередь, я опираюсь на лаконичность и минимализм, они создают особую атмосферу гармонии и порядка в пространстве.</span>
@@ -2078,8 +2088,8 @@
 </svg></i></a>
 								</div>
 							</figcaption>
-							  
-						</figure>	
+
+						</figure>
 					</div>
 					<div class="swiper-slide">
 						<figure class="designer">
@@ -2091,13 +2101,13 @@
 									<p class="name">Егор Малышев </p>
 									<p class="position">Дизайнер интерьеров</p>
 								</div>
-							</figcaption> 
-							   
+							</figcaption>
+
 						</figure>
 						<figure class="designer-portfolio">
-						<div class="image">
+							<div class="image">
 								<img src="bitrix/images/slider-designer/work1.jpg" alt="">
-							</div>  
+							</div>
 							<figcaption>
 								<div>
 									<span class="quote">Создавая проекты, в первую очередь, я опираюсь на лаконичность и минимализм, они создают особую атмосферу гармонии и порядка в пространстве.</span>
@@ -2111,8 +2121,8 @@
 </svg></i></a>
 								</div>
 							</figcaption>
-							  
-						</figure>	
+
+						</figure>
 					</div>
 					<div class="swiper-slide">
 						<figure class="designer">
@@ -2124,13 +2134,13 @@
 									<p class="name">Егор</p>
 									<p class="position">Дизайнер </p>
 								</div>
-							</figcaption> 
-							   
+							</figcaption>
+
 						</figure>
 						<figure class="designer-portfolio">
-						<div class="image">
+							<div class="image">
 								<img src="bitrix/images/slider-designer/work1.jpg" alt="">
-							</div>  
+							</div>
 							<figcaption>
 								<div>
 									<span class="quote">они создают особую атмосферу гармонии и порядка в пространстве.</span>
@@ -2144,8 +2154,8 @@
 </svg></i></a>
 								</div>
 							</figcaption>
-							  
-						</figure>	
+
+						</figure>
 					</div>
 				</div>
 				<!-- Add Pagination -->
@@ -2348,65 +2358,65 @@
 		</script>
 		<div class="grey_bg">
 			<div class="wrapper_inner bg-white">
-			<div class="wrap_md">
-				<div class="news_wrap news_wrap-portfolio">
-					<div class="news_block news">
-						<div class="top_block">
-							<a href="company/news/index.html" class="title_block">Портфолио</a>
-						</div>
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-								<img src="bitrix/images/slider/slider-50-1.jpg" alt="">
-									<p class="label"><a href="#">Кафе «English» в центре Минска</a></p>
-								</div>
-								<div class="swiper-slide">
-								<img src="bitrix/images/slider/slider-50-1.jpg" alt="">
-									<p class="label"><a href="#">Кафе «English» в центре Минска2</a></p>
-								</div>
-								<div class="swiper-slide">
-								<img src="bitrix/images/slider/slider-50-1.jpg" alt="">
-									<p class="label"><a href="#">Кафе «English» в центре Минска3</a></p>
-								</div>
+				<div class="wrap_md">
+					<div class="news_wrap news_wrap-portfolio">
+						<div class="news_block news">
+							<div class="top_block">
+								<a href="company/news/index.html" class="title_block">Портфолио</a>
 							</div>
-							<!-- Add Pagination -->
-							<div class="swiper-pagination"></div>
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="bitrix/images/slider/slider-50-1.jpg" alt="">
+										<p class="label"><a href="#">Кафе «English» в центре Минска</a></p>
+									</div>
+									<div class="swiper-slide">
+										<img src="bitrix/images/slider/slider-50-1.jpg" alt="">
+										<p class="label"><a href="#">Кафе «English» в центре Минска2</a></p>
+									</div>
+									<div class="swiper-slide">
+										<img src="bitrix/images/slider/slider-50-1.jpg" alt="">
+										<p class="label"><a href="#">Кафе «English» в центре Минска3</a></p>
+									</div>
+								</div>
+								<!-- Add Pagination -->
+								<div class="swiper-pagination"></div>
+							</div>
+
 						</div>
-							
 					</div>
-				</div>
-				<div class="news_wrap news_wrap-news">
-					<div class="news_block news">
-						<div class="top_block">
-							<a href="company/news/index.html" class="title_block">Новости и акции</a>
-						</div>
-						<div class="info_block">
-							<div class="news_items">
-								<div id="bx_1373509569_415" class="item box-sizing">
-									<div class="image">
-										<a href="company/news/2015/apple/index.html">
-											<img class="img-responsive" src="bitrix/images/news/news1.jpg" alt="Apple представляет совершенно новый MacBook Pro с дисплеем Retina" title="Apple представляет совершенно новый MacBook Pro с дисплеем Retina">
-										</a>
+					<div class="news_wrap news_wrap-news">
+						<div class="news_block news">
+							<div class="top_block">
+								<a href="company/news/index.html" class="title_block">Новости и акции</a>
+							</div>
+							<div class="info_block">
+								<div class="news_items">
+									<div id="bx_1373509569_415" class="item box-sizing">
+										<div class="image">
+											<a href="company/news/2015/apple/index.html">
+												<img class="img-responsive" src="bitrix/images/news/news1.jpg" alt="Apple представляет совершенно новый MacBook Pro с дисплеем Retina" title="Apple представляет совершенно новый MacBook Pro с дисплеем Retina">
+											</a>
+										</div>
+										<div class="info">
+											<div class="title_block">Новости</div>
+											<div class="date">1 Июня 2015</div>
+											<a class="name" href="company/news/2015/apple/index.html">Презентация нового продукта «Atria»</a>
+										</div>
 									</div>
-									<div class="info">
-										<div class="title_block">Новости</div>
-										<div class="date">1 Июня 2015</div>
-										<a class="name" href="company/news/2015/apple/index.html">Презентация нового продукта «Atria»</a>
+									<div id="bx_1373509569_415" class="item box-sizing">
+										<div class="image">
+											<a href="company/news/2015/apple/index.html">
+												<img class="img-responsive" src="bitrix/images/news/news1.jpg" alt="Apple представляет совершенно новый MacBook Pro с дисплеем Retina" title="Apple представляет совершенно новый MacBook Pro с дисплеем Retina">
+											</a>
+										</div>
+										<div class="info">
+											<div class="title_block">Акции</div>
+											<div class="date">2 Июня 2015</div>
+											<a class="name" href="company/news/2015/apple/index.html">Ценопад на краску Topcolor, успейте купить по выгодным ценам</a>
+										</div>
 									</div>
-								</div>
-								<div id="bx_1373509569_415" class="item box-sizing">
-									<div class="image">
-										<a href="company/news/2015/apple/index.html">
-											<img class="img-responsive" src="bitrix/images/news/news1.jpg" alt="Apple представляет совершенно новый MacBook Pro с дисплеем Retina" title="Apple представляет совершенно новый MacBook Pro с дисплеем Retina">
-										</a>
-									</div>
-									<div class="info">
-										<div class="title_block">Акции</div>
-										<div class="date">2 Июня 2015</div>
-										<a class="name" href="company/news/2015/apple/index.html">Ценопад на краску Topcolor, успейте купить по выгодным ценам</a>
-									</div>
-								</div>
-								<a href="#" class="see_all">читать все новости<i><svg viewBox="0 0 24 13">
+									<a href="#" class="see_all">читать все новости<i><svg viewBox="0 0 24 13">
 <g>
 	<g>
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#5CE1A1" d="M24,6L24,6L24,6l-9-6v1h0v5H0v1h15v5h0v1L24,6L24,6L24,6z
@@ -2414,13 +2424,13 @@
 	</g>
 </g>
 </svg></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			</div>
-		</div>		
+		</div>
 		<div class="wrapper_inner without-padding">
 			<div class="brands_slider_wrapp">
 				<ul class="brands_slider">
@@ -2541,6 +2551,7 @@
 				$(".brands_slider_wrapp").flexslider({
 					animation: "slide",
 					selector: ".brands_slider > li",
+//										direction: "vertical",
 					slideshow: false,
 					animationSpeed: 600,
 					directionNav: true,
@@ -2552,7 +2563,7 @@
 				});
 			</script>
 		</div>
-		
+
 
 
 		<script>
@@ -2701,7 +2712,7 @@
 			</div>
 			<div class="wrapper_inner wrapper_inner-bottom">
 				<div class="footer_bottom">
-					<div class="wrap_md">						
+					<div class="wrap_md">
 						<div class="iblock menu_block">
 							<div class="wrap_md">
 								<div class="iblock copy_block">
@@ -2727,7 +2738,8 @@
 						<div class="iso_block iblock"><img src="bitrix/images/made-in/iso.png" alt=""></div>
 						<div class="iblock social_block">
 							<div class="wrap_md">
-								<div class="adress_block iblock">220055, г.Минск, <br>ул. Каменногорская, 47, оф. 54 </div>
+								<div class="adress_block iblock">220055, г.Минск,
+									<br>ул. Каменногорская, 47, оф. 54 </div>
 								<div class="social_wrapper iblock">
 									<div class="social">
 										<a href="http://www.facebook.com/aspro74" target="_blank">

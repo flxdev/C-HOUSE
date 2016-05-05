@@ -50,8 +50,8 @@ $(document).ready(function () {
         pagination: '.swiper-pagination',
         paginationClickable: true,
 		loop: true,
-		autoplay: 2500
-//		effect: 'fade'
+		autoplay: 2500,
+		effect: 'fade'
     });
 	
 	

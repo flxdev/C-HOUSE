@@ -962,15 +962,20 @@ ul.menu.menu-right li .child ul li a{
     color: #393939;
 }
 
-.tab_slider_wrapp ul.tabs li span{
+.tab_slider_wrapp ul.tabs li span,
+.tab_slider_wrapp ul.tabs.tabs-main li.cur span{
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
 	border-bottom: 1px dotted;
 	font-weight: bold;
 	font-size: 18px;
+	line-height: 20px;
 	letter-spacing: 0.03em;
 	padding: 0;
+	text-transform: initial;
 }
 
-.tab_slider_wrapp ul.tabs li.cur span{
+.tab_slider_wrapp ul.tabs li.cur span,
+.tab_slider_wrapp ul.tabs.tabs-main li.cur span{
 	border-bottom: none;
 }
 
@@ -1036,6 +1041,10 @@ ul.menu.menu-right li .child ul li a{
 	margin-right: 94px;
 	text-transform: uppercase;
 	transition: all 0.3s ease;
+}
+
+.title_block .title.title-main{
+	margin-right: 0;
 }
 
 .title_block .title:hover{
@@ -4054,6 +4063,23 @@ blockquote a:hover,
 	position: relative;
 	top: 1px;
 	transition: background 0.3s ease;
+}
+
+.basket_empty .basket_empty_description .button.transparent.continue.start-shopping::after{
+	content: '';
+	display: inline-block;
+	width: 24px;
+	height: 13px;
+	background: url('../images/svg/forward.svg') center no-repeat;
+	position: relative;
+	top: 1px;
+	left: 7px;
+	transition: background 0.3s ease;
+}
+
+.basket_empty .basket_empty_description .button.transparent.continue.start-shopping:hover::after{
+	content: '';
+	background: url('../images/svg/forward-hover.svg') center no-repeat;
 }
 
 .backet_back_wrapp .basket_back .button.grey_br.transparent.continue:hover::before,
