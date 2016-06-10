@@ -60,6 +60,7 @@
 
 body{
 	background: #f0f0f0;
+	min-width: 980px;
 }
 
 a:hover, .link:hover, .header_wrap .top-h-row .menu li > a:hover, .top-h-row .menu li.current > a, .phones .phone_wrap a, .phones .order_wrap_btn:hover, .avtorization-call.enter, .top-h-row .h-user-block a, .main-nav ul.menu > li > a, ul.mini-menu li a, body .main-nav .menu > li.current > a, .white #header .catalog_menu ul.menu > li a, ul.menu .child li.menu_title a, ul.menu .child li.menu_item a:hover, #header .catalog_menu ul.menu > li > a, #header .catalog_menu ul.menu > li.current > a, .wrapper.has_menu .white #header .catalog_menu ul.menu > li:hover > a, body .white #header ul.menu li .child.submenu .child_wrapp a:hover, body .wrapper.has_menu #header ul.menu li .child.submenu .child_wrapp a:not(.title):hover, ul.menu li .depth3 a.title:hover, #header .wrapper_middle_menu .menu > li .child.submenu .child_wrapp a.current:not(.title), #header .menu > li .child_wrapp a.current:not(.title), body #header ul.menu li .child.submenu.line .child_wrapp > a, .search_middle_block .middle_form .noborder, .basket_wrapp .wraps_icon_block .count a, .basket_wrapp .wraps_icon_block .count .text, .basket_wrapp .basket_block .title, .cost.prices .price, .sale_block .text, .sale_block .value, .news .item .info .date, .stores .stores_list .item a:hover span, .footer_top .sblock .wrap_more_text, .footer_top .sblock .wrap_more_text div, .footer_bottom .submenu_top .menu_item a, .img_block_capcha .reload:hover, .form-control .forgot:hover, #header .basket_fly .basket_title, .basket_sort ul.tabs li.cur span, .basket_sort ul.tabs li:hover .wrap_li > span, .basket_sort ul.tabs li:hover .wrap_li > span *, .module-cart .name-cell a:hover, .basket_sort ul.tabs li.cur .wrap_li > span, .basket_sort ul.tabs li.cur .wrap_li > span *, .basket_sort ul.tabs li .wrap_li > span *, .section_item_inner .section_info ul li a:hover, .bx_filter .bx_filter_parameters_box_title, .bx_filter .bx_filter_popup_result a, .left_block .internal_sections_list .title a, .left_block .internal_sections_list li a:not(.cur), .item .child_container .child_wrapp .menu_item:not(.current) a, .left_block .internal_sections_list .child_wrapp .child li.depth3 a.menu_item.cur:hover, .catalog_item:hover .item-title a, .item-title a:hover, li.item:hover a, .item_wrap:hover .item-title a, .view_sale_block .values, .more_text_ajax:hover, .bx_compare .compare_view .item_block:hover a, .item-stock .store_link:hover, .set_block .item:hover .item_info a, .item .date_small, .articles-list.news .item:hover .item-title a, .jobs_wrapp .item .name tr:hover .link, .basket_wrapp .empty_cart:not(.bcart) .wraps_icon_block .count span a, .basket_wrapp .basket_empty .wraps_icon_block.basket .count span, .basket_wrapp .basket_fly .basket_count.empty .wraps_icon_block.basket .count span {
@@ -76,7 +77,7 @@ a:hover, .link:hover, .header_wrap .top-h-row .menu li > a:hover, .top-h-row .me
 .wrapper_inner {
     padding: 0 40px;
     max-width: 1212px;
-	min-width: 1060px;
+	min-width: 980px;
 }
 
 .wrapper{
@@ -133,7 +134,7 @@ a:hover, .link:hover, .header_wrap .top-h-row .menu li > a:hover, .top-h-row .me
     font-size: 14px;
     color: #9c9c9c;
     padding: 0 19px;
-    width: 330px;
+    width: 100%;
     letter-spacing: 0.03em;
 }
 
@@ -1984,6 +1985,10 @@ h2{
 .number-list li{
 	display: inline-block;
 	width: 33.333%;
+	padding-left: 100px;
+	position: relative;
+    box-sizing: border-box;
+    z-index: 0;
 }
 
 .number-list li .count{
@@ -1994,6 +1999,10 @@ h2{
 	letter-spacing: 0.03em;
 /*	float: left;*/
 	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: 35px;
+	z-index: -1;
 }
 
 .number-list li .count-content{
@@ -2004,7 +2013,7 @@ h2{
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	display: inline-block;
-	margin-left: -90px;
+	margin-bottom: 0;
 }
 
 blockquote:before{
@@ -5523,9 +5532,10 @@ table.title-search-result td.main b{
 }
     
 div.title-search-result{
+	position: absolute;
 	top: 85px !important;
-	left: 520px !important;
-    width: 330px !important;
+	left: 365px !important;
+/*    width: 330px !important;*/
 }
 
 table.title-search-result .price{
@@ -5776,11 +5786,17 @@ table.title-search-result td.title-search-all{
 	max-width: 100%;
 }
 
+.captcha-row.register-captcha .captcha_image{
+	box-sizing: border-box;
+    width: 50%;
+    float: right;
+}
+
 .captcha-row .captcha_image img {
     height: 50px;
     border: none;
     vertical-align: middle;
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
     padding-left: 20px;
 	padding-right: 37px;
@@ -6327,6 +6343,7 @@ table.title-search-result td.title-search-all{
 	height: 100%;
 	background: #f9f9f9;
 	float: left;
+	object-fit: cover;
 }
 
 .articles-list.lists_block .item .left-data,
@@ -6649,4 +6666,81 @@ label.error{
 	letter-spacing: 0.03em;
 	padding: 0 10px;
 	margin: 20px 0 40px !important;
+}
+
+@media (max-width: 1200px){
+	#header .middle-h-row .center_block .middle_phone{
+		padding-right: 0;
+	}
+	
+	.articles-list.lists_block .right-data{
+		width: 57%;
+	}
+}
+
+@media (max-width: 1168px){
+	.start_promo .item:first-child, 
+	.start_promo .item.normal:first-child, 
+	.start_promo .item:nth-child(3n+1), .start_promo .item.normal:nth-child(2n+1) + .item:not(.s_2) {
+		border-left-width: 10px;
+	}
+	
+	.start_promo .item{
+		padding-bottom: 0;
+	}
+
+	.articles-list.lists_block .item .left-data > a > img {
+		width: 225px;
+		max-width: 225px;
+	}
+	.articles-list.lists_block .right-data {
+		left: 225px;
+	}
+	
+	.catalog_section_list .section_item li.name a span,
+	.articles-list .item .item-title a span{
+		font-size: 16px;
+    	line-height: 26px;
+	}
+}
+
+@media (max-width: 1120px){
+	#header .wrapper_inner .middle-h-row .center_block .search {
+		width: 55%;
+		margin-left: 0;
+	}
+	
+	#header .middle-h-row .center_block {
+		padding: 0px 0 0 45px;
+	}
+	
+	.captcha-row.register-captcha .captcha_image .captcha_reload {
+		left: auto;
+		right: 0;
+	}
+	
+	.articles-list.lists_block .right-data {
+		width: 52%;
+	}
+	
+	.articles-list .date_small{
+		margin-bottom: 5px;
+	}
+}
+
+
+@media (max-width: 1050px){
+	#delivery-way li input[type='radio']+label{
+		padding: 0 15px;
+	}
+}
+
+@media (max-width: 1024px){
+	.articles-list.lists_block .item .left-data > a > img {
+		width: 215px;
+		max-width: 215px;
+	}
+	.articles-list.lists_block .right-data {
+		left: 215px;
+	}
 }
