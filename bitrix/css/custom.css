@@ -6837,6 +6837,7 @@ label.error{
 .designers-container .swiper-container-designers .designer-portfolio .image {
 	width: 100%;
 	float: none;
+<<<<<<< HEAD
 }
 
 
@@ -6923,4 +6924,6 @@ label.error{
 }
 .item_slider:not(.flex) .slides  li.big{
 	border: 1px solid #f0f0f0 !important;
+=======
+>>>>>>> 8afdb8f110d8075402fe96e909ea08c3d4eee1d3
 }
