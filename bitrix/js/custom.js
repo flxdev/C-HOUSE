@@ -40,7 +40,7 @@ $(document).ready(function () {
         paginationType: 'fraction',
 		direction: 'vertical',
 		loop: true,
-		autoplay: 2500
+		autoplay: 10000
 //		effect: 'fade'
     });
 	
@@ -50,7 +50,7 @@ $(document).ready(function () {
         pagination: '.swiper-pagination-designers',
         paginationType: 'fraction',
 		loop: true,
-		autoplay: 2500,
+		autoplay: 10000,
 		effect: 'fade'
     });
 	
@@ -58,7 +58,7 @@ $(document).ready(function () {
         pagination: '.swiper-pagination',
         paginationClickable: true,
 		loop: true,
-		autoplay: 2500,
+		autoplay: 10000,
 		effect: 'fade'
     });
 	

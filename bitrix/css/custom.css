@@ -759,7 +759,7 @@ ul.menu.menu-right li .child ul li a{
 }
 
 .tizers_block{
-	text-align: left;
+	text-align: center;
 	margin: 0;
 }
 
@@ -774,7 +774,7 @@ ul.menu.menu-right li .child ul li a{
 }
 
 .tizers_block .item .title{
-	width: 80%;
+	width: 60%;
 	font-size: 14px;
 	line-height: 24px;
 	letter-spacing: 0.03em;
@@ -3066,13 +3066,19 @@ textarea{
 
 .catalog_detail .tabs_section .tabs-head li{
 	margin: 0;
-	border: 2px solid #393939;
+	border: 1px solid #f0f0f0;
 	box-sizing: border-box;
 /*	width: 33.333%;*/
 	background: transparent;
 	text-align: center;
-	height: 50px;
+	height: 38px;
 	transition: background 0.3s ease, border 0.3s ease;
+	padding: 4px 18px 8px 18px;
+	border-bottom-width: 0px;
+}
+.catalog_detail .tabs_section .tabs-head li span {
+	font-size: 14px;
+	font-weight: normal;
 }
 
 .catalog_detail .tabs_section .tabs-head li.current{
@@ -3082,7 +3088,7 @@ textarea{
 
 .catalog_detail .tabs_section .tabs-head li:hover{
 	background: #f1c40f;
-	border: 2px solid #f1c40f
+	border: 1px solid #f1c40f
 }
 
 .catalog_detail .tabs_section .tabs-head > li:nth-child(1){
@@ -6837,9 +6843,8 @@ label.error{
 .designers-container .swiper-container-designers .designer-portfolio .image {
 	width: 100%;
 	float: none;
-<<<<<<< HEAD
-}
 
+}
 
 
 /*new_v*/
@@ -6924,6 +6929,4 @@ label.error{
 }
 .item_slider:not(.flex) .slides  li.big{
 	border: 1px solid #f0f0f0 !important;
-=======
->>>>>>> 8afdb8f110d8075402fe96e909ea08c3d4eee1d3
 }
