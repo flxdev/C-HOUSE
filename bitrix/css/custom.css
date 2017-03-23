@@ -1778,6 +1778,10 @@ a.scroll-to-top.RECT_COLOR:hover{
 	color: #393939;
 }
 
+.adress_block.iblock p {
+	width: 80%;
+}
+
 /* social */
 
 .footer_bottom .social_block {
@@ -1825,6 +1829,7 @@ a.scroll-to-top.RECT_COLOR:hover{
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.03em;
+	white-space: nowrap;
 }
 
 .mailto{
